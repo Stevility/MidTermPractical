@@ -19,11 +19,12 @@ public:
 	wxButton* ans2 = nullptr;
 	wxButton* ans3 = nullptr;
 	wxButton* ans4 = nullptr;
-	wxButton* incans = nullptr;
-	int clans1 = 25;
-	int inans1 = -1;
+	wxButton* incans1 = nullptr;
+	int clans1 = 2;
+	int inans1 = 0;
 
 	void OnButtonClicked(wxCommandEvent& evt);
+	void WrongButtonCLicked(wxCommandEvent& evt);
 
 	wxDECLARE_EVENT_TABLE();
 };
