@@ -19,8 +19,9 @@ public:
 	wxButton* ans2 = nullptr;
 	wxButton* ans3 = nullptr;
 	wxButton* ans4 = nullptr;
-	bool isCorrect = true;
+	wxButton* incans = nullptr;
 	int clans1 = 25;
+	int inans1 = -1;
 
 	void OnButtonClicked(wxCommandEvent& evt);
 

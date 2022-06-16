@@ -5,6 +5,7 @@ EVT_BUTTON(25, OnButtonClicked)
 EVT_BUTTON(20, OnButtonClicked)
 EVT_BUTTON(7.753, OnButtonClicked)
 EVT_BUTTON(52850, OnButtonClicked)
+EVT_BUTTON(1, OnButtonClicked)
 wxEND_EVENT_TABLE()
 
 cMain::cMain() : wxFrame(nullptr, wxID_ANY, "Midterm Practical!", wxPoint(500, 200), wxSize(450,600))
@@ -23,6 +24,8 @@ cMain::cMain() : wxFrame(nullptr, wxID_ANY, "Midterm Practical!", wxPoint(500, 2
 	ans2 = new wxButton(this, 20, "20", wxPoint(90, 205), wxSize(40, 40));
 	ans3 = new wxButton(this, 7.753, "7.753 billion", wxPoint(10, 325), wxSize(150, 40));
 	ans4 = new wxButton(this, 52850, "52,850 light years!", wxPoint(10, 445), wxSize(150, 40));
+	incans = new wxButton(this, 1, "72,477 light years!", wxPoint(200, 445), wxSize(150, 40));
+
 }
 
 cMain::~cMain()
@@ -31,9 +34,15 @@ cMain::~cMain()
 
 void cMain::OnButtonClicked(wxCommandEvent& evt)
 {
-	if (clans1 == 25)
+	if (clans1 > 2)
 	{
 		wxMessageBox("Correct!");
 		
 	}
+	else if (clans1 <= 1)
+	{
+		wxMessageBox("Incorrect!");
+	}
+	
+	evt.Skip();
 }
